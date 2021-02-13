@@ -1,0 +1,23 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class LocatorName {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.setProperty("webdriver.gecko.driver","C:\\gecko\\geckodriver.exe");
+    	WebDriver driver = new FirefoxDriver();
+        driver.get("https://amazon.in");
+        try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        driver.findElement(By.name("field-keywords")).sendKeys("Ballon");
+        driver.quit();  // using QUIT all windows will close
+	}
+
+}
