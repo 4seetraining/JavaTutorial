@@ -8,7 +8,7 @@ public class LocatorById {
 		// TODO Auto-generated method stub
 		System.setProperty("webdriver.gecko.driver","C:\\gecko\\geckodriver.exe");
     	WebDriver driver = new FirefoxDriver();
-        String baseUrl = "http://www.facebook.com";
+        String baseUrl = "";
         driver.get(baseUrl);
         try {
 			Thread.sleep(5000);
