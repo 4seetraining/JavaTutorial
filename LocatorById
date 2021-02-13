@@ -1,0 +1,29 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class LocatorById {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.gecko.driver","C:\\gecko\\geckodriver.exe");
+    	WebDriver driver = new FirefoxDriver();
+        String baseUrl = "http://www.facebook.com";
+        driver.get(baseUrl);
+        try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        driver.findElement(By.id("email")).sendKeys("1234567890");
+        driver.findElement(By.id("pass")).sendKeys("passwordtest");
+        driver.findElement(By.id("u_0_b")).click();
+        
+       
+        driver.close();
+        System.exit(0);
+
+	}
+
+}
